@@ -340,7 +340,7 @@
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!--<section id="contact" class="contact">
       <div class="container">
         <div class="contact-title">
           <h2 class="title">Contact</h2>
@@ -363,41 +363,57 @@
               required
             />
           </div>-->
+      <section id="contact">
+        <div class="contact-container">
           <form id="contactForm">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <textarea name="message" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+      
+            <div
+              class="contact-button"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <button class="btn btn-red" type="submit">Send Message</button>
+            </div>
           </form>
-          
+      
           <div id="responseMessage" style="margin-top: 1rem;"></div>
-          
-          <script>
-            document.getElementById('contactForm').addEventListener('submit', async function (e) {
-              e.preventDefault();
-          
-              const form = e.target;
-              const formData = new FormData(form);
-              const responseBox = document.getElementById('responseMessage');
-          
-              try {
-                const response = await fetch("https://formsubmit.co/carlloswattsnogueira@gmail.com", {
-                  method: "POST",
-                  body: formData
-                });
-          
-                if (response.ok) {
-                  responseBox.innerHTML = "<p style='color:green;'>Mensagem enviada com sucesso!</p>";
-                  form.reset();
-                } else {
-                  responseBox.innerHTML = "<p style='color:red;'>Erro ao enviar. Tente novamente.</p>";
-                }
-              } catch (error) {
-                responseBox.innerHTML = "<p style='color:red;'>Erro de rede. Verifique sua conexão.</p>";
-              }
+        </div>
+      </section>
+      
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+          e.preventDefault();
+      
+          const form = e.target;
+          const formData = new FormData(form);
+          const responseBox = document.getElementById('responseMessage');
+      
+          try {
+            const response = await fetch("https://formsubmit.co/carlloswattsnogueira@gmail.com", {
+              method: "POST",
+              body: formData
             });
-          </script>
-          <textarea
+      
+            if (response.ok) {
+              responseBox.innerHTML = "<p style='color:green;'>Message sent successfully!</p>";
+              form.reset();
+              setTimeout(() => {
+                responseBox.innerHTML = "";
+              }, 5000);
+            } else {
+              responseBox.innerHTML = "<p style='color:red;'>Failed to send. Please try again.</p>";
+            }
+          } catch (error) {
+            responseBox.innerHTML = "<p style='color:red;'>Network error. Please check your connection.</p>";
+          }
+        });
+      </script>
+          <!--<textarea
             name="message"
             id=""
             cols="30"
@@ -419,7 +435,7 @@
         </form>
         <div class="response"></div>
       </div>
-    </section>
+    </section>-->
 
     <footer class="footer">
       <div class="container">
