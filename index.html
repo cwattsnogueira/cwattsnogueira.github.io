@@ -66,19 +66,20 @@
           <div class="hero-content">
             <span class="hero-greeting"> Hello, I am</span>
             <h1 class="hero-heading">Carllos Watts-Nogueira</h1>
-            <span class="hero-heading-subtitle"
-              >AI/ML Engineer</span
+            <span class="hero-heading-subtitle">
+            AI/ML Engineer · Data Science Enthusiast · Bridging Strategy & Innovation
+            </span>
             >
             <div class="about-social-list">
               <div class="social-links-row">
-                <a href="#!">
+                <a href="https://github.com/cwattsnogueira">
                   <img
                     src="img/social_icons/github.svg"
                     alt="https://github.com/cwattsnogueira"
                   />
                 </a>
 
-                <a href="#!">
+                <a href="https://www.linkedin.com/in/carlloswattsnogueira/">
                   <img
                     src="img/social_icons/linkedin.svg"
                     alt="https://www.linkedin.com/in/carlloswattsnogueira/"
@@ -142,7 +143,7 @@
               vision to life!
             </p>
             <div class="about-download-btn">
-              <a href="#!" class="btn btn-white">Download CV</a>
+              <a href="img/Carllos-Watts-Nogueira-CV.pdf" class="btn btn-white" download>Download CV</a>
             </div>
           </div>
           <div
@@ -352,9 +353,9 @@
           </p>
         </div>
 
-        <form class="contactForm" data-aos="zoom-in" data-aos-duration="1000">
+        <form class="contactForm" action="https://carllos.infinityfreeapp.com/mail.php" method="POST" novalidate data-aos="zoom-in" data-aos-duration="1000">
           <div class="input-box">
-            <input type="text" name="name" placeholder="Name" required />
+            <input type="text" name="name" placeholder="Name" aria-label="Name" required />
             <input
               type="email"
               name="email"
@@ -378,7 +379,7 @@
             data-aos-delay="500"
             data-aos-duration="1000"
           >
-            <button href="#!" class="btn btn-red" name="submit" type="submit">
+            <button class="btn btn-red" name="submit" type="submit">
               Send Message
             </button>
           </div>
@@ -391,14 +392,14 @@
       <div class="container">
         <div class="footer-row">
           <div class="social-links-row footer-social">
-            <a href="#!">
+            <a href="https://github.com/cwattsnogueira">
               <img
                 src="img/social_icons/github.svg"
                 alt="https://github.com/cwattsnogueira"
               />
             </a>
 
-            <a href="#!">
+            <a href="https://www.linkedin.com/in/carlloswattsnogueira/">
               <img
                 src="img/social_icons/linkedin.svg"
                 alt="https://www.linkedin.com/in/carlloswattsnogueira/"
@@ -423,7 +424,8 @@
           </div>
 
           <div class="footer-copyright">
-            <p>&copy; Copyright Carllos Watts-Nogueira 2025</p>
+            <p>&copy; Copyright Carllos Watts-Nogueira <span id="year"></span></p>
+            <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
           </div>
         </div>
       </div>
@@ -434,13 +436,41 @@
         <img src="img/icons/arrow_up.svg" alt="Back to top"
       /></a>
     </div>
+    <script>
+      document.querySelector('.contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault(); // Impede o envio padrão
 
+        const form = e.target;
+        const formData = new FormData(form);
+        const responseBox = document.querySelector('.response');
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+          });
+
+          if (response.ok) {
+            responseBox.innerHTML = "<p style='color:green;'>Message sent successfully!</p>";
+            form.reset();
+          } else {
+            const errorText = await response.text();
+            responseBox.innerHTML = `<p style='color:red;'>${errorText}</p>`;
+          }
+        } catch (error) {
+          responseBox.innerHTML = "<p style='color:red;'>Network error. Please try again later.</p>";
+        }
+      });
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
       integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
