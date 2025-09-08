@@ -353,7 +353,7 @@
           </p>
         </div>
 
-        <form class="contactForm" action="https://carllos.infinityfreeapp.com/mail.php" method="POST" novalidate data-aos="zoom-in" data-aos-duration="1000">
+        <!--<form class="contactForm" action="https://carllos.infinityfreeapp.com/mail.php" method="POST" novalidate data-aos="zoom-in" data-aos-duration="1000">
           <div class="input-box">
             <input type="text" name="name" placeholder="Name" aria-label="Name" required />
             <input
@@ -362,8 +362,13 @@
               placeholder="Email Address"
               required
             />
-          </div>
-
+          </div>-->
+        <form action="https://formsubmit.co/seuemail@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-red">Send Message</button>
+        </form>
           <textarea
             name="message"
             id=""
@@ -436,7 +441,7 @@
         <img src="img/icons/arrow_up.svg" alt="Back to top"
       /></a>
     </div>
-    <script>
+    <!--<script>
       document.querySelector('.contactForm').addEventListener('submit', async function (e) {
         e.preventDefault(); // Impede o envio padrão
 
@@ -461,7 +466,8 @@
           responseBox.innerHTML = "<p style='color:red;'>Network error. Please try again later.</p>";
         }
       });
-    </script>
+    </script>-->
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
       integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
