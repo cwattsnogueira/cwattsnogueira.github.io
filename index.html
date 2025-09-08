@@ -341,71 +341,69 @@
     </section>
 
     <section id="contact" class="contact">
-  <div class="container">
-    <div class="contact-title">
-      <h2 class="title">Contact</h2>
-    </div>
-    <div class="contact-content">
-      <p>
-        Tell me about your project.
-        <br />
-        Let's talk and work together!
-      </p>
-    </div>
-
-    <form id="contactForm" action="https://formsubmit.co/carlloswattsnogueira@gmail.com" method="POST" novalidate data-aos="zoom-in" data-aos-duration="1000">
-      <div class="input-box">
-        <input type="text" name="name" placeholder="Name" aria-label="Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
+      <div class="container">
+        <div class="contact-title">
+          <h2 class="title">Contact</h2>
+        </div>
+        <div class="contact-content">
+          <p>
+            Tell me about your project.
+            <br />
+            Let's talk and work together!
+          </p>
+        </div>
+    
+        <form id="contactForm" action="https://formsubmit.co/carlloswattsnogueira@gmail.com" method="POST" novalidate data-aos="zoom-in" data-aos-duration="1000">
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Name" aria-label="Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+          </div>
+    
+          <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+    
+          <div
+            class="contact-button"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
+            <button class="btn btn-red" type="submit">Send Message</button>
+          </div>
+        </form>
+    
+        <div id="responseMessage" class="response" style="margin-top: 1rem;"></div>
       </div>
-
-      <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-
-      <div
-        class="contact-button"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-out"
-        data-aos-delay="500"
-        data-aos-duration="1000"
-      >
-        <button class="btn btn-red" type="submit">Send Message</button>
-      </div>
-    </form>
-
-    <div id="responseMessage" class="response" style="margin-top: 1rem;"></div>
-  </div>
-</section>
-
-<script>
-  document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-    const responseBox = document.getElementById('responseMessage');
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData
+    </section>
+    
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+    
+        const form = e.target;
+        const formData = new FormData(form);
+        const responseBox = document.getElementById('responseMessage');
+    
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData
+          });
+    
+          if (response.ok) {
+            responseBox.innerHTML = "<p style='color:green;'>Message sent successfully!</p>";
+            form.reset();
+            setTimeout(() => {
+              responseBox.innerHTML = "";
+            }, 5000);
+          } else {
+            responseBox.innerHTML = "<p style='color:red;'>Failed to send. Please try again.</p>";
+          }
+        } catch (error) {
+          responseBox.innerHTML = "<p style='color:red;'>Network error. Please check your connection.</p>";
+        }
       });
-
-      if (response.ok) {
-        responseBox.innerHTML = "<p style='color:green;'>Message sent successfully!</p>";
-        form.reset();
-        setTimeout(() => {
-          responseBox.innerHTML = "";
-        }, 5000);
-      } else {
-        responseBox.innerHTML = "<p style='color:red;'>Failed to send. Please try again.</p>";
-      }
-    } catch (error) {
-      responseBox.innerHTML = "<p style='color:red;'>Network error. Please check your connection.</p>";
-    }
-  });
-</script>
-
-
+    </script>
 
     <footer class="footer">
       <div class="container">
@@ -455,33 +453,6 @@
         <img src="img/icons/arrow_up.svg" alt="Back to top"
       /></a>
     </div>
-    <!--<script>
-      document.querySelector('.contactForm').addEventListener('submit', async function (e) {
-        e.preventDefault(); // Impede o envio padrão
-
-        const form = e.target;
-        const formData = new FormData(form);
-        const responseBox = document.querySelector('.response');
-
-        try {
-          const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData
-          });
-
-          if (response.ok) {
-            responseBox.innerHTML = "<p style='color:green;'>Message sent successfully!</p>";
-            form.reset();
-          } else {
-            const errorText = await response.text();
-            responseBox.innerHTML = `<p style='color:red;'>${errorText}</p>`;
-          }
-        } catch (error) {
-          responseBox.innerHTML = "<p style='color:red;'>Network error. Please try again later.</p>";
-        }
-      });
-    </script>-->
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
       integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
