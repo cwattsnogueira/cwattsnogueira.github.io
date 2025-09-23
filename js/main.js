@@ -3,17 +3,16 @@ import form from "./form.js";
 import skillbar from "./skillbar.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    once: true,
-  });
+  AOS.init({ once: true });
   form();
   skillbar();
 
   const nav = document.querySelector("#nav");
   const navBtn = document.querySelector("#nav-btn");
   const navBtnImg = document.querySelector("#nav-btn-img");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  //Hamburger menu
+  // Hamburger menu toggle
   navBtn.onclick = () => {
     if (nav.classList.toggle("open")) {
       navBtnImg.src = "img/icons/close.svg";
@@ -22,6 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // Close menu when clicking on a nav link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      navBtnImg.src = "img/icons/open.svg";
+    });
+  });
+
+  // Sticky header + back-to-top
   window.addEventListener("scroll", function () {
     const header = document.querySelector("#header");
     const hero = document.querySelector("#home");
@@ -36,8 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Highlight active section link
   let sections = document.querySelectorAll("section");
-  let navLinks = document.querySelectorAll("header nav a");
+  let navLinksScroll = document.querySelectorAll("header nav a");
 
   window.onscroll = () => {
     sections.forEach((sec) => {
@@ -47,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let id = sec.getAttribute("id");
 
       if (top >= offset && top < offset + height) {
-        navLinks.forEach((links) => {
+        navLinksScroll.forEach((links) => {
           links.classList.remove("active");
           document
             .querySelector("header nav a[href*=" + id + "]")
