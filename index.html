@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carllos Watts-Nogueira</title>
     <link rel="shortcut icon" href="img/Lightbulbfavi.png" type="image/x-icon" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" />
     <link
@@ -17,6 +19,13 @@
   </head>
 
   <body>
+    <!-- Preloader (optional) -->
+    <div id="preloader">
+      <div class="jumping-dots">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+
     <header id="header" class="header">
       <div class="container container-lg">
         <div class="header-nav">
@@ -54,6 +63,7 @@
       </div>
     </header>
 
+    <!-- HERO -->
     <section id="home" class="hero">
       <div class="container container-lg">
         <div
@@ -69,46 +79,33 @@
             <span class="hero-heading-subtitle"
               >AI Engineer · ML Engineer · NLP Engineer · Data Scientist - AI/ML</span
             >
+
+            <!-- Social icons (clickable) -->
             <div class="about-social-list">
               <div class="social-links-row">
-                <a href="https://github.com/cwattsnogueira">
-                  <img
-                    src="img/social_icons/github.svg"
-                    alt="Link to GitHub account"
-                  />
+                <a href="https://github.com/cwattsnogueira" target="_blank" rel="noopener">
+                  <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
                 </a>
 
-                <a href="https://www.linkedin.com/in/carlloswattsnogueira/">
-                  <img
-                    src="img/social_icons/linkedin.svg"
-                    alt="Link to linkedin profile"
-                  />
+                <a href="https://www.linkedin.com/in/carlloswattsnogueira/" target="_blank" rel="noopener">
+                  <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
                 </a>
 
-                <a href="https://huggingface.co/cwattsnogueira">
-                  <img
-                    src="img/social_icons/hf3.svg"
-                    alt="Link to HF profile"
-                  />
+                <a href="https://huggingface.co/cwattsnogueira" target="_blank" rel="noopener">
+                  <img src="img/social_icons/hf3.svg" alt="Link to HF profile" />
                 </a>
 
-                <a href="https://www.salesforce.com/trailblazer/carlloswattsnogueira">
-                  <img
-                    src="img/social_icons/st.svg"
-                    alt="Link to trailblazer profile"
-                  />
+                <a href="https://www.salesforce.com/trailblazer/carlloswattsnogueira" target="_blank" rel="noopener">
+                  <img src="img/social_icons/st.svg" alt="Link to trailblazer profile" />
                 </a>
 
-                <a href="https://www.kaggle.com/carlloswattsnogueira">
-                  <img
-                    src="img/social_icons/k.svg"
-                    alt="Link to kaggle profile"
-                /></a>
-                <a href="https://leetcode.com/u/carlloswattsnogueira/">
-                  <img
-                    src="img/social_icons/lc.svg"
-                    alt="Link to leetcode profile"
-                /></a>
+                <a href="https://www.kaggle.com/carlloswattsnogueira" target="_blank" rel="noopener">
+                  <img src="img/social_icons/k.svg" alt="Link to kaggle profile" />
+                </a>
+
+                <a href="https://leetcode.com/u/carlloswattsnogueira/" target="_blank" rel="noopener">
+                  <img src="img/social_icons/lc.svg" alt="Link to leetcode profile" />
+                </a>
               </div>
             </div>
 
@@ -117,17 +114,17 @@
               <a href="#contact" class="btn btn-white">Contact Me</a>
             </div>
           </div>
+
           <div class="hero-img">
-            <img
-              src="img/carllos.png"
-              alt="Picture of Carllos Watts-Nogueira</a>
-              "
-            />
+            <div class="profile-avatar" data-aos="fade-left" data-aos-duration="1000">
+              <img src="img/carllos.png" alt="Picture of Carllos Watts-Nogueira" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ABOUT (keeps skills, service cards, download CV) -->
     <section id="about" class="about">
       <div class="container">
         <div class="about-title">
@@ -140,16 +137,17 @@
             data-aos-duration="1000"
           >
             <p class="about-descr">
-              Hi, I’m Carllos Watts-Nogueira, 
-              an AI & Machine Learning Engineer with 9+ years of experience in CRM implementation, enterprise consulting, and intelligent workflow design. 
-              I graduated in October 2025 from the University of San Diego’s immersive AI/ML program (powered by Fullstack Academy), 
-              where I gained hands-on experience in Python, Applied Data Science, Machine Learning, Deep Learning, NLP, and Generative AI.<br /><br />Let’s collaborate 
-              and turn data into innovation.
+              Hi, I’m Carllos Watts-Nogueira,
+              an AI & Machine Learning Engineer with 9+ years of experience in CRM implementation, enterprise consulting, and intelligent workflow design.
+              I graduated from the University of San Diego’s immersive AI/ML program (powered by Fullstack Academy), where I gained hands-on experience in Python, Applied Data Science, Machine Learning, Deep Learning, NLP, and Generative AI.<br /><br />
+              Let’s collaborate and turn data into innovation.
             </p>
             <div class="about-download-btn">
               <a href="img/carlloswatts-nogueira.pdf" class="btn btn-white">Download CV</a>
             </div>
           </div>
+
+          <!-- Skills (kept) -->
           <div
             class="about-skills"
             data-aos="fade-up"
@@ -160,53 +158,61 @@
               <div class="skill-title">Python</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="95"></div>
               </div>
             </div>
+
             <div class="skill">
               <div class="skill-title">Applied Data Science</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="88"></div>
               </div>
             </div>
+
             <div class="skill">
               <div class="skill-title">Machine Learning</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="90"></div>
               </div>
             </div>
+
             <div class="skill">
               <div class="skill-title">Deep Learning (TensorFlow & Keras)</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="82"></div>
               </div>
             </div>
+
             <div class="skill">
               <div class="skill-title">Natural Language Processing</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="85"></div>
               </div>
             </div>
+
             <div class="skill">
               <div class="skill-title">Generative AI (Essentials & Applications)</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="80"></div>
               </div>
             </div>
+
             <div class="skill">
-              <div class="skill-title">Large Language Model</div>
+              <div class="skill-title">Large Language Models</div>
               <div class="skill-percent"></div>
               <div class="skill-bar__progress">
-                <div class="skill-bar__fill" data-progress=""></div>
+                <div class="skill-bar__fill" data-progress="78"></div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Service cards (kept) -->
         <div class="services-row">
           <div
             class="service-card"
@@ -217,8 +223,7 @@
             <img class="service-card-img" src="img/services/electronic-ai-blue.svg" alt="" />
             <h3 class="service-card-title">Artificial Intelligence</h3>
             <p>
-              Developing intelligent systems that learn, adapt, and make decisions 
-              to solve complex challenges across industries.
+              Developing intelligent systems that learn, adapt, and make decisions to solve complex challenges across industries.
             </p>
           </div>
 
@@ -231,8 +236,7 @@
             <img class="service-card-img" src="img/services/Machine-Learning-Brain.svg" alt="" />
             <h3 class="service-card-title">Machine Learning</h3>
             <p>
-              Building predictive models and algorithms that uncover patterns and 
-              insights from structured and unstructured data.
+              Building predictive models and algorithms that uncover patterns and insights from structured and unstructured data.
             </p>
           </div>
 
@@ -245,20 +249,45 @@
             <img class="service-card-img" src="img/services/Brain-Light-Bulb-By-Elisa-Riva.svg" alt="" />
             <h3 class="service-card-title">Data Science</h3>
             <p>
-              Extracting actionable insights through statistical analysis, data engineering, 
-              and visualization to drive informed decisions.
+              Extracting actionable insights through statistical analysis, data engineering, and visualization to drive informed decisions.
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- EXPERIENCE (kept + formatted) -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="title">Experience & Collaborations</h2>
+        <div class="experience-grid">
+          <div class="company-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="img/companies/accenture.svg" alt="Accenture" />
+            <h4>Accenture</h4>
+          </div>
+          <div class="company-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="img/companies/ilia.svg" alt="Ilia" />
+            <h4>Ilia</h4>
+          </div>
+          <div class="company-card" data-aos="fade-up" data-aos-delay="150">
+            <img src="img/companies/softtech.svg" alt="SoftTech Smile" />
+            <h4>SoftTech Smile</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (keeps original projects, adds categories & GitHub buttons) -->
     <section id="projects" class="projects">
       <div class="container container-lg">
         <div class="projects-title">
           <h2 class="title">Projects</h2>
         </div>
 
+        <!-- Category: AI, NLP, Deep Learning -->
+        <div class="projects-category">
+          <h3>AI · NLP · Deep Learning</h3>
+        </div>
         <div class="projects-row">
           <div
             class="project-box"
@@ -266,7 +295,7 @@
             data-aos-easing="ease-in-out"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/expenses-tracker-python-app">
+            <a href="https://github.com/cwattsnogueira/expenses-tracker-python-app" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0001.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
@@ -275,8 +304,11 @@
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/expenses-tracker-python-app" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
-          
+
           <div
             class="project-box"
             data-aos="fade-zoom-in"
@@ -284,7 +316,7 @@
             data-aos-delay="300"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/health-data-analysis-eda">
+            <a href="https://github.com/cwattsnogueira/health-data-analysis-eda" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0002.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
@@ -293,8 +325,11 @@
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/health-data-analysis-eda" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
-          
+
           <div
             class="project-box"
             data-aos="fade-zoom-in"
@@ -302,7 +337,7 @@
             data-aos-delay="600"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/bikeease-demand-analysis">
+            <a href="https://github.com/cwattsnogueira/bikeease-demand-analysis" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0003.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
@@ -311,8 +346,11 @@
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/bikeease-demand-analysis" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
-          
+
           <div
             class="project-box"
             data-aos="fade-zoom-in"
@@ -320,7 +358,7 @@
             data-aos-delay="900"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/sales-analysis-australia-q4">
+            <a href="https://github.com/cwattsnogueira/sales-analysis-australia-q4" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0004.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
@@ -329,7 +367,17 @@
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/sales-analysis-australia-q4" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
+        </div>
+
+        <!-- Category: ML, Data Science, Analytics -->
+        <div class="projects-category">
+          <h3>Machine Learning · Data Science · Analytics</h3>
+        </div>
+        <div class="projects-row">
           <div
             class="project-box"
             data-aos="fade-zoom-in"
@@ -337,7 +385,7 @@
             data-aos-delay="1200"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/florida-bike-rentals-prediction/tree/main">
+            <a href="https://github.com/cwattsnogueira/florida-bike-rentals-prediction/tree/main" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0008.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
@@ -346,8 +394,11 @@
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/florida-bike-rentals-prediction/tree/main" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
-          
+
           <div
             class="project-box"
             data-aos="fade-zoom-in"
@@ -355,92 +406,108 @@
             data-aos-delay="1500"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/vehicle-image-classification">
+            <a href="https://github.com/cwattsnogueira/vehicle-image-classification" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0007.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Vehicle Image Classification – Deep Learning with TensorFlow & Keras for Binary Image Recognition</h5>
+                  <h5 class="white">Vehicle Image Classification – Deep Learning</h5>
                   <p class="white">ML Engineer</p>
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/vehicle-image-classification" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
 
           <div
             class="project-box"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-out"
-            data-aos-delay="1500"
+            data-aos-delay="1800"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/default-risk-prediction">
+            <a href="https://github.com/cwattsnogueira/default-risk-prediction" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0006.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Default Risk Prediction – Deep Learning & Ensemble Modeling for Loan Default Classification</h5>
+                  <h5 class="white">Default Risk Prediction – Deep Learning & Ensemble Modeling</h5>
                   <p class="white">ML Engineer</p>
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/default-risk-prediction" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
 
           <div
             class="project-box"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-out"
-            data-aos-delay="1500"
+            data-aos-delay="2100"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/bikeease-nlp-capstone">
+            <a href="https://github.com/cwattsnogueira/bikeease-nlp-capstone" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0009.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">BikeEase Review Analysis – NLP for Sentiment & Theme Extraction</h5>
+                  <h5 class="white">BikeEase Review Analysis – NLP</h5>
                   <p class="white">NLP Engineer</p>
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/bikeease-nlp-capstone" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
 
           <div
             class="project-box"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-out"
-            data-aos-delay="1500"
+            data-aos-delay="2400"
             data-aos-duration="1000"
           >
-            <a href="https://github.com/cwattsnogueira/nlp-banking-insights">
+            <a href="https://github.com/cwattsnogueira/nlp-banking-insights" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0010.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">Banking Complaints Sentiment Insights – NLP for Complaint Classification & Business Intelligence</h5>
+                  <h5 class="white">Banking Complaints Sentiment Insights – NLP</h5>
                   <p class="white">NLP Engineer</p>
                 </div>
               </div>
             </a>
+            <div class="project-btn">
+              <a href="https://github.com/cwattsnogueira/nlp-banking-insights" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
           </div>
 
           <div
             class="project-box"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-out"
-            data-aos-delay="1500"
+            data-aos-delay="2700"
             data-aos-duration="1000"
           >
-            <a href="https://huggingface.co/spaces/cwattsnogueira/bikeease-ad-generator">
+            <a href="https://huggingface.co/spaces/cwattsnogueira/bikeease-ad-generator" target="_blank" rel="noopener">
               <img class="project-img" src="img/works/0005.jpg" alt="" />
               <div class="project-mask">
                 <div class="project-caption">
-                  <h5 class="white">BikeEase Ad Generator Generative</h5>
+                  <h5 class="white">BikeEase Ad Generator — Generative</h5>
                   <p class="white">AI Engineer</p>
                 </div>
               </div>
             </a>
-          </div>          
+            <div class="project-btn">
+              <a href="https://huggingface.co/spaces/cwattsnogueira/bikeease-ad-generator" target="_blank" class="btn btn-white">View on GitHub</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT (keeping original form + fixed contact info) -->
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-title">
@@ -466,8 +533,8 @@
               required
             />
           </div>
-          
-          <textarea 
+
+          <textarea
             name="message"
             cols="30"
             rows="10"
@@ -490,43 +557,69 @@
       </div>
     </section>
 
+    <!-- EDUCATION -->
+    <section id="education" class="education">
+      <div class="container">
+        <h2 class="title">Education</h2>
+        <div class="education-grid">
+          <div class="edu-card" data-aos="fade-up" data-aos-delay="50">
+            <img src="img/education/usd.svg" alt="University of San Diego" />
+            <p>University of San Diego</p>
+          </div>
+          <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="img/education/fullstack.svg" alt="Fullstack Academy" />
+            <p>Fullstack Academy (AI/ML Program)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="certifications">
+      <div class="container">
+        <h2 class="title">Certifications</h2>
+        <div class="cert-grid">
+          <div class="cert-card" title="AWS Certified Machine Learning – Specialty">
+            <img src="img/certs/aws-ml.svg" alt="AWS ML" />
+          </div>
+          <div class="cert-card" title="Google Data Analytics Professional Certificate">
+            <img src="img/certs/google-analytics.svg" alt="Google Data Analytics" />
+          </div>
+          <div class="cert-card" title="IBM AI Engineering Professional Certificate">
+            <img src="img/certs/ibm-ai.svg" alt="IBM AI Engineering" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (keeps social logos and copyright) -->
     <footer class="footer">
       <div class="container">
         <div class="footer-row">
           <div class="social-links-row footer-social">
-            <a href="https://github.com/cwattsnogueira">
-              <img
-                src="img/social_icons/github.svg"
-                alt="Link to GitHub account"
-              />
+            <a href="https://github.com/cwattsnogueira" target="_blank" rel="noopener">
+              <img src="img/social_icons/github.svg" alt="Link to GitHub account" />
             </a>
 
-            <a href="https://www.linkedin.com/in/carlloswattsnogueira/">
-              <img
-                src="img/social_icons/linkedin.svg"
-                alt="Link to linkedin profile"
-              />
+            <a href="https://www.linkedin.com/in/carlloswattsnogueira/" target="_blank" rel="noopener">
+              <img src="img/social_icons/linkedin.svg" alt="Link to linkedin profile" />
             </a>
 
-            <a href="https://huggingface.co/cwattsnogueira">
+            <a href="https://huggingface.co/cwattsnogueira" target="_blank" rel="noopener">
               <img src="img/social_icons/hf3.svg" alt="Link to HF profile" />
             </a>
 
-            <a href="https://www.salesforce.com/trailblazer/carlloswattsnogueira">
+            <a href="https://www.salesforce.com/trailblazer/carlloswattsnogueira" target="_blank" rel="noopener">
               <img src="img/social_icons/st.svg" alt="Link to trailblazer profile" />
             </a>
 
-            <a href="https://www.kaggle.com/carlloswattsnogueira">
-              <img
-                src="img/social_icons/k.svg"
-                alt="Link to kaggle profile"
-            /></a>
+            <a href="https://www.kaggle.com/carlloswattsnogueira" target="_blank" rel="noopener">
+              <img src="img/social_icons/k.svg" alt="Link to kaggle profile" />
+            </a>
 
-            <a href="https://leetcode.com/u/carlloswattsnogueira/">
-              <img
-                src="img/social_icons/lc.svg"
-                alt="Link to leetcode profile"
-            /></a>
+            <a href="https://leetcode.com/u/carlloswattsnogueira/" target="_blank" rel="noopener">
+              <img src="img/social_icons/lc.svg" alt="Link to leetcode profile" />
+            </a>
           </div>
 
           <div class="footer-copyright">
@@ -538,16 +631,18 @@
 
     <div id="goToTop" class="goToTop">
       <a href="#home">
-        <img src="img/icons/arrow_up.svg" alt="Back to top"
-      /></a>
+        <img src="img/icons/arrow_up.svg" alt="Back to top" />
+      </a>
     </div>
 
+    <!-- AOS and main JS (module) -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
       integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
