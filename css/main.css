@@ -867,6 +867,12 @@ body {
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
+.project-box .project-label + .project-label {
+  top: auto;
+  right: 10px;
+  margin-top: 30px; 
+}
+
 .project-box:hover .project-label {
   transform: scale(1.05);
   background: var(--secondary-accent);
