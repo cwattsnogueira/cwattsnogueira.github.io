@@ -3,7 +3,12 @@ import form from "./form.js";
 import skillbar from "./skillbar.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({ once: true });
+  // Initialize AOS
+  if (window.AOS) {
+    AOS.init({ once: true, duration: 1000 });
+  }
+
+  // Run local modules
   form();
   skillbar();
 
@@ -11,21 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const navBtn = document.querySelector("#nav-btn");
   const navBtnImg = document.querySelector("#nav-btn-img");
   const navLinks = document.querySelectorAll(".nav-link");
+  const goToTop = document.querySelector("#goToTop");
 
   // Hamburger menu toggle
-  navBtn.onclick = () => {
-    if (nav.classList.toggle("open")) {
-      navBtnImg.src = "img/icons/close.svg";
-    } else {
-      navBtnImg.src = "img/icons/open.svg";
-    }
-  };
+  if (navBtn) {
+    navBtn.onclick = () => {
+      if (nav.classList.toggle("open")) {
+        navBtnImg.src = "img/icons/close.svg";
+      } else {
+        navBtnImg.src = "img/icons/open.svg";
+      }
+    };
+  }
 
   // Close menu when clicking on a nav link
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("open");
-      navBtnImg.src = "img/icons/open.svg";
+      if (navBtnImg) navBtnImg.src = "img/icons/open.svg";
     });
   });
 
@@ -33,18 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", function () {
     const header = document.querySelector("#header");
     const hero = document.querySelector("#home");
-    let triggerHeight = hero.offsetHeight - 170;
+    const goToTopEl = document.querySelector("#goToTop");
+    let triggerHeight = hero ? hero.offsetHeight - 170 : 200;
 
     if (window.scrollY > triggerHeight) {
       header.classList.add("header-sticky");
-      goToTop.classList.add("reveal");
+      if (goToTopEl) goToTopEl.classList.add("reveal");
     } else {
       header.classList.remove("header-sticky");
-      goToTop.classList.remove("reveal");
+      if (goToTopEl) goToTopEl.classList.remove("reveal");
     }
   });
 
-  // Highlight active section link
+  // Highlight active section link on scroll
   let sections = document.querySelectorAll("section");
   let navLinksScroll = document.querySelectorAll("header nav a");
 
@@ -58,11 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
       if (top >= offset && top < offset + height) {
         navLinksScroll.forEach((links) => {
           links.classList.remove("active");
-          document
-            .querySelector("header nav a[href*=" + id + "]")
-            .classList.add("active");
         });
+        const activeLink = document.querySelector("header nav a[href*=" + id + "]");
+        if (activeLink) activeLink.classList.add("active");
       }
     });
   };
+
+  // Preloader hide when page fully loaded
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    }
+  });
 });
