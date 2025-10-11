@@ -843,3 +843,32 @@ body {
     height: 90px;
   }
 }
+/* ---------- Fixed Label on Project Images ---------- */
+.project-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.project-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary-accent);
+  color: var(--white-color);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-box:hover .project-label {
+  transform: scale(1.05);
+  background: var(--secondary-accent);
+}
+
