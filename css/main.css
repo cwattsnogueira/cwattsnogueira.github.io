@@ -931,3 +931,9 @@ body {
   background: var(--secondary-accent);
   transform: scale(1.05);
 }
+
+/* Hide skill percentage if not used */
+.skill-percent:empty {
+  display: none;
+}
+
