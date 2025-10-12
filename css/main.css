@@ -790,12 +790,18 @@ body {
 }
 
 .edu-card img {
-  width: 100%;
-  height: auto;
+  width: 120px;              /* same width for all images */
+  height: 120px;             /* same height for all images */
+  object-fit: contain;       /* keeps logo proportions inside the box */
+  object-position: center;
   margin-bottom: 10px;
   filter: grayscale(20%);
   transition: filter 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;        /* centers the image inside card */
 }
+
 
 .edu-card img:hover {
   filter: none;
