@@ -691,11 +691,31 @@ body {
 
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns per row */
   gap: 40px;
   align-items: center;
+  justify-items: center;
   margin-top: 40px;
 }
+
+/* Responsive layout: 2 per row on tablets, 1 per row on mobile */
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.experience-grid {
+  row-gap: 60px; /* instead of gap: 40px; or in addition */
+}
+
+
 
 .company-card {
   background: var(--white-color);
