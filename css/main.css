@@ -692,41 +692,43 @@ body {
 /* --- EXPERIENCE SECTION UNIFORM LAYOUT --- */
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
   justify-items: center;
   align-items: stretch;
 }
 
+/* CARD BASE */
 .company-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 1.2rem 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 160px; /* fixed height for all cards */
+  justify-content: center;  /* centers both logo + text */
+  height: 190px; /* more space */
+  width: 180px; /* fixed width for uniform grid alignment */
 }
 
 .company-card:hover {
   transform: translateY(-6px);
 }
 
-/* make logos consistent */
+/* LOGOS */
 .company-card img {
   width: auto;
-  height: 60px; /* fixed logo area height */
+  height: 70px; /* consistent logo size */
   max-width: 100%;
   object-fit: contain;
   object-position: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
-/* uniform text under logos */
+/* TEXT */
 .company-card h4 {
   font-size: 0.95rem;
   font-weight: 600;
@@ -735,7 +737,25 @@ body {
   margin: 0;
 }
 
+/* MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 
+  .company-card {
+    width: 150px;
+    height: 160px;
+  }
+
+  .company-card img {
+    height: 60px;
+  }
+}
+
+
+/* --- PROJECT --- */
 /* Project category header */
 .projects-category {
   text-align: center;
