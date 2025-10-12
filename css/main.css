@@ -691,56 +691,56 @@ body {
 
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns per row */
-  gap: 40px;
+  grid-template-columns: repeat(7, 1fr); /* 7 cards in one row */
+  gap: 24px;
   align-items: center;
   justify-items: center;
   margin-top: 40px;
 }
 
-/* Responsive layout: 2 per row on tablets, 1 per row on mobile */
+/* Responsive layout adjustments */
+@media (max-width: 1200px) {
+  .experience-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row on medium screens */
+  }
+}
+
 @media (max-width: 900px) {
   .experience-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
   }
 }
 
 @media (max-width: 600px) {
   .experience-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on small screens */
   }
 }
 
-.experience-grid {
-  row-gap: 60px; /* instead of gap: 40px; or in addition */
+@media (max-width: 400px) {
+  .experience-grid {
+    grid-template-columns: 1fr; /* 1 per row on very small devices */
+  }
 }
-
-
 
 .company-card {
   background: var(--white-color);
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
+  padding: 20px 10px; /* reduced padding */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.company-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
 .company-card img {
-  width: 80px;
+  width: 60px; /* was 80px */
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .company-card h4 {
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--supportive-text-color);
+  font-size: 14px; /* slightly smaller text */
 }
+
 
 /* Project category header */
 .projects-category {
