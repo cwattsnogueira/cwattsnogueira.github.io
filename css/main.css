@@ -440,6 +440,14 @@ body {
   text-align: left;
 }
 
+/* Taller images for small-height visuals */
+.project-img.taller {
+  height: 340px;        
+  object-fit: cover;    
+  object-position: center;
+}
+
+
 /* --- GitHub button --- */
 .project-btn {
   text-align: center;
