@@ -450,6 +450,19 @@ body {
   margin-top: 12px;
 }
 
+/* Normalize project images (make all uniform size) */
+.project-overlay img,
+.project-img {
+  width: 100%;
+  height: 200px;           /* define altura fixa */
+  object-fit: contain;     /* mantém proporção sem cortar */
+  object-position: center; /* centraliza imagem no bloco */
+  background-color: #fff;  /* fundo neutro caso tenha transparência */
+  padding: 10px;           /* espaço interno para respiro */
+  display: block;
+}
+
+
 /* Contact */
 .contact {
   padding: 7rem 0;
