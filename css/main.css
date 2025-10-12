@@ -366,6 +366,7 @@ body {
   gap: 24px;
 }
 
+/* --- Individual project cards --- */
 .project-box {
   position: relative;
   overflow: hidden;
@@ -378,6 +379,7 @@ body {
   display: inline-block;
 }
 
+/* --- Image hover zoom --- */
 .project-box:hover .project-mask {
   opacity: 1;
   visibility: visible;
@@ -388,51 +390,45 @@ body {
   opacity: 1;
 }
 
+/* --- Smooth zoom --- */
 .project-box:hover .project-img {
-  transform: scale(1.1);
-  transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  width: 100%;
+  transform: scale(1.05);
 }
 
+/* --- Normalize project images (uniform size & crop) --- */
+.project-overlay img,
 .project-img {
-  transform: scale(1);
   width: 100%;
-  transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
-  display:block;
-  height:auto;
+  height: 280px;             
+  object-fit: cover;         
+  object-position: center;   
+  display: block;
+  border-radius: 6px;        
+  transition: transform 0.6s ease;
 }
 
+/* --- Overlay mask --- */
 .project-mask {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   height: 100%;
-  position: absolute;
-  transition: all 0.5s ease-in-out 0s;
   width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
-}
-
-.project-mask p {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  font-weight: 400;
-  margin-top: 0;
-  text-align: left;
+  transition: all 0.5s ease-in-out;
 }
 
 .project-mask .project-caption {
   position: absolute;
   bottom: -60px;
   left: 0;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px;
   text-align: left;
-  transition: all 0.5s ease-in-out 0s;
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .project-mask p {
@@ -444,24 +440,11 @@ body {
   text-align: left;
 }
 
-/* Project button */
+/* --- GitHub button --- */
 .project-btn {
   text-align: center;
   margin-top: 12px;
 }
-
-/* Normalize project images (make all uniform size) */
-.project-overlay img,
-.project-img {
-  width: 100%;
-  height: 200px;           
-  object-fit: contain;     
-  object-position: center; 
-  background-color: #fff;  
-  padding: 10px;           
-  display: block;
-}
-
 
 /* Contact */
 .contact {
